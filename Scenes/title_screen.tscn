@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dyb7oi14ebt0w"]
+
+[ext_resource type="Texture2D" uid="uid://b85ijmitepdne" path="res://images/candybackground.png" id="1_klylv"]
+[ext_resource type="Script" uid="uid://waqq73n4dp6n" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+
+[node name="TitleScreen" type="Node2D" unique_id=865268932]
+script = ExtResource("1_p3fck")
+
+[node name="Background" type="TextureRect" parent="." unique_id=800037088]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_klylv")
+expand_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1380327804]
+clip_contents = false
+offset_left = 234.0
+offset_top = 96.0
+offset_right = 916.0
+offset_bottom = 332.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "CANDYWARE
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1045412547]
+offset_left = 423.0
+offset_top = 271.0
+offset_right = 713.0
+offset_bottom = 536.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1903809746]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 30
+text = "Start Game"
+
+[node name="How to Play" type="Button" parent="VBoxContainer" unique_id=863077917]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 30
+text = "How to Play"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1991480349]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
