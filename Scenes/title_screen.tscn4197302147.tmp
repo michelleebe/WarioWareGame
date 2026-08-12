@@ -1,27 +1,21 @@
 [gd_scene format=3 uid="uid://dyb7oi14ebt0w"]
 
-[ext_resource type="Texture2D" uid="uid://b85ijmitepdne" path="res://images/candybackground.png" id="1_klylv"]
 [ext_resource type="Script" uid="uid://waqq73n4dp6n" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://dm8tbqi0mdg17" path="res://images/winterbackground.png" id="2_p3fck"]
 
 [node name="TitleScreen" type="Node2D" unique_id=865268932]
 script = ExtResource("1_p3fck")
 
 [node name="Background" type="TextureRect" parent="." unique_id=800037088]
 offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_klylv")
+offset_bottom = 674.0
+texture = ExtResource("2_p3fck")
 expand_mode = 1
 
-[node name="Title" type="RichTextLabel" parent="." unique_id=1380327804]
-clip_contents = false
-offset_left = 234.0
-offset_top = 96.0
-offset_right = 916.0
-offset_bottom = 332.0
-theme_override_constants/outline_size = 40
-theme_override_font_sizes/normal_font_size = 108
-text = "CANDYWARE
-"
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1888056977]
+offset_right = 736.0
+offset_bottom = 511.0
+text = "WINTER WARE"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1045412547]
 offset_left = 423.0

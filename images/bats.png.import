@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b85ijmitepdne"
-path="res://.godot/imported/candybackground.png-f17ce94eeef7c8cefe90bc8fda21ed5a.ctex"
+uid="uid://b1t85o3a86fgy"
+path="res://.godot/imported/bats.png-cd109fe6f74783d6e30908e0033a677e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/candybackground.png"
-dest_files=["res://.godot/imported/candybackground.png-f17ce94eeef7c8cefe90bc8fda21ed5a.ctex"]
+source_file="res://images/bats.png"
+dest_files=["res://.godot/imported/bats.png-cd109fe6f74783d6e30908e0033a677e.ctex"]
 
 [params]
 

@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://k5i7ljt21cwa"]
+
+[ext_resource type="Script" uid="uid://b1f0xn5uvdmf" path="res://Scenes/titlescreen.gd" id="1_qf0g6"]
+[ext_resource type="Texture2D" uid="uid://dfw6lq73wl0pb" path="res://images/ff536505-8f04-46b9-a3ad-035b724eed22.png" id="1_wshof"]
+[ext_resource type="Texture2D" uid="uid://hjokrnxg34xg" path="res://images/words.png" id="2_qf0g6"]
+[ext_resource type="FontFile" uid="uid://drqfcfwmqbofd" path="res://images/ShakyHalloween.otf" id="3_up5sg"]
+[ext_resource type="AudioStream" uid="uid://b5ogbrsrdt7ab" path="res://images/677436__musicbymisterbates__spooky-halloween-soundtrack.mp3" id="4_w7bgp"]
+
+[node name="titlescreen" type="Control" unique_id=1651111024]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qf0g6")
+
+[node name="background" type="TextureRect" parent="." unique_id=657905543]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 650.0
+texture = ExtResource("1_wshof")
+expand_mode = 1
+
+[node name="title" type="TextureRect" parent="." unique_id=2143727064]
+layout_mode = 0
+offset_left = 111.0
+offset_top = -41.0
+offset_right = 1047.0
+offset_bottom = 476.0
+texture = ExtResource("2_qf0g6")
+expand_mode = 1
+
+[node name="start button" type="Button" parent="." unique_id=1481144736]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 304.0
+offset_right = 686.0
+offset_bottom = 364.0
+theme_override_fonts/font = ExtResource("3_up5sg")
+theme_override_font_sizes/font_size = 40
+text = "START GAME"
+
+[node name="settings button" type="Button" parent="." unique_id=351755597]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 373.0
+offset_right = 686.0
+offset_bottom = 433.0
+theme_override_fonts/font = ExtResource("3_up5sg")
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+
+[node name="quit button" type="Button" parent="." unique_id=893671624]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 442.0
+offset_right = 686.0
+offset_bottom = 502.0
+theme_override_fonts/font = ExtResource("3_up5sg")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1970658402]
+stream = ExtResource("4_w7bgp")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="start button" to="." method="_on_start_button_pressed"]
