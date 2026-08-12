@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 [autoload]
 
 Global="*uid://cmucol5v28rti"
+Music="*uid://dw53k4d3c6eb8"
 
 [display]
 

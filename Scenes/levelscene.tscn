@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cxywahfc8xse7" path="res://images/stripe.png" id="2_ct4h3"]
 [ext_resource type="Texture2D" uid="uid://cnk7ycefg14mr" path="res://images/candy.png" id="3_qev0w"]
 [ext_resource type="FontFile" uid="uid://bfehvc30ek0qt" path="res://images/Halloween Day.otf" id="4_wof8y"]
+[ext_resource type="AudioStream" uid="uid://141vpvbwb6vk" path="res://images/675681__nightcustard__ticking-smiths-car-clock.mp3" id="6_0qicr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0nra"]
 shader = ExtResource("1_ct4h3")
@@ -225,3 +226,7 @@ text = "0.0"
 root_node = NodePath("../candy")
 libraries/ = SubResource("AnimationLibrary_sgym1")
 autoplay = &"bob"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=778443024]
+stream = ExtResource("6_0qicr")
+autoplay = true

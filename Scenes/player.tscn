@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://x37ogllew5qs"]
+
+[ext_resource type="Script" uid="uid://bcvdvw6c6k3kb" path="res://Scenes/player.gd" id="1_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://cuh0a62fngtsf" path="res://images/WitchFlying.png" id="1_v0iea"]
+[ext_resource type="AudioStream" uid="uid://jovapkcbttxd" path="res://images/553028-joao-janz-draw-square-pencil-2-02_Vd2nBbON.wav" id="2_cvnsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kh0ps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}],
+"loop": 1,
+"name": &"walk_idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f60y1"]
+radius = 26.476404
+
+[node name="player" type="CharacterBody2D" unique_id=142796690]
+script = ExtResource("1_6t5aa")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=217162263]
+position = Vector2(2, -8)
+sprite_frames = SubResource("SpriteFrames_kh0ps")
+animation = &"walk_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1270064849]
+shape = SubResource("CircleShape2D_f60y1")
+
+[node name="soundeffects" type="Node" parent="." unique_id=635419435]
+
+[node name="walk" type="AudioStreamPlayer" parent="soundeffects" unique_id=209805783]
+stream = ExtResource("2_cvnsp")

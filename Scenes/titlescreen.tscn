@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dfw6lq73wl0pb" path="res://images/ff536505-8f04-46b9-a3ad-035b724eed22.png" id="1_wshof"]
 [ext_resource type="Texture2D" uid="uid://hjokrnxg34xg" path="res://images/words.png" id="2_qf0g6"]
 [ext_resource type="FontFile" uid="uid://drqfcfwmqbofd" path="res://images/ShakyHalloween.otf" id="3_up5sg"]
-[ext_resource type="AudioStream" uid="uid://b5ogbrsrdt7ab" path="res://images/677436__musicbymisterbates__spooky-halloween-soundtrack.mp3" id="4_w7bgp"]
 
 [node name="titlescreen" type="Control" unique_id=1651111024]
 layout_mode = 3
@@ -56,10 +55,5 @@ offset_bottom = 502.0
 theme_override_fonts/font = ExtResource("3_up5sg")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
-
-[node name="music" type="AudioStreamPlayer" parent="." unique_id=1970658402]
-stream = ExtResource("4_w7bgp")
-autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="start button" to="." method="_on_start_button_pressed"]
