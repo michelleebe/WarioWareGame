@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://chg7nv0f85bg6"]
 
-[ext_resource type="Script" uid="uid://b3qjc7u2vc3b" path="res://Scenes/timer.gd" id="1_pvhx5"]
+[ext_resource type="FontFile" uid="uid://bfehvc30ek0qt" path="res://images/Halloween Day.otf" id="1_pvhx5"]
 
 [node name="timer" type="RichTextLabel" unique_id=351166132]
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_pvhx5")
+theme_override_fonts/normal_font = ExtResource("1_pvhx5")
+theme_override_font_sizes/normal_font_size = 41
+text = "0.0"

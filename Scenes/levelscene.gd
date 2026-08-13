@@ -11,6 +11,7 @@ extends Node2D
 var time: float
 
 func _ready() -> void:
+	update_lives()
 	await Timer(3.0)
 
 	if Global.minigames_done < 3:
@@ -23,34 +24,47 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	timer.text = str(ceil(time))
+	level.text = "Level " + str(Global.minigames_done)
+
+
+func update_lives() -> void:
+	# Show all candy corns first
+	candy.show()
+	candy2.show()
+	candy3.show()
+	candy4.show()
+	candy5.show()
+
+	# Remove lives from RIGHT to LEFT
 	match Global.lives:
+		5:
+			pass
+
 		4:
-			candy.hide()
+			candy5.hide()
 
 		3:
-			candy.hide()
-			candy2.hide()
+			candy5.hide()
+			candy4.hide()
 
 		2:
-			candy.hide()
-			candy2.hide()
+			candy5.hide()
+			candy4.hide()
 			candy3.hide()
 
 		1:
-			candy.hide()
-			candy2.hide()
-			candy3.hide()
+			candy5.hide()
 			candy4.hide()
+			candy3.hide()
+			candy2.hide()
 
 		0:
-			candy.hide()
-			candy2.hide()
-			candy3.hide()
-			candy4.hide()
 			candy5.hide()
-
-	timer.text = str(ceil(time))
-	level.text = "Level " + str(Global.minigames_done)
+			candy4.hide()
+			candy3.hide()
+			candy2.hide()
+			candy.hide()
 
 
 func Timer(start_time: float) -> void:

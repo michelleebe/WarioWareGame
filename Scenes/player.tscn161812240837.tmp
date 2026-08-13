@@ -23,7 +23,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f60y1"]
@@ -37,7 +37,6 @@ position = Vector2(3, -10.000001)
 scale = Vector2(1.4166666, 1.328125)
 sprite_frames = SubResource("SpriteFrames_kh0ps")
 animation = &"walk_idle"
-autoplay = "walk_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1270064849]
 shape = SubResource("CircleShape2D_f60y1")

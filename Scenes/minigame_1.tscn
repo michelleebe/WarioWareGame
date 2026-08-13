@@ -2,21 +2,81 @@
 
 [ext_resource type="Shader" uid="uid://dlt4qfr6phdk7" path="res://Scenes/minigame_1.gdshader" id="1_11mgy"]
 [ext_resource type="Texture2D" uid="uid://b1t85o3a86fgy" path="res://images/bats.png" id="1_enoba"]
+[ext_resource type="Script" uid="uid://bmryqdroeoiji" path="res://Scenes/minigame_1.gd" id="1_jmcek"]
+[ext_resource type="PackedScene" uid="uid://x37ogllew5qs" path="res://Scenes/player.tscn" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://b373g3bxukond" path="res://Scenes/potion.gd" id="4_5txvl"]
+[ext_resource type="Texture2D" uid="uid://c8aivh7r6hvdo" path="res://images/colorful-pixel-potion-bottle-design-free-png.webp" id="4_o6yob"]
+[ext_resource type="Script" uid="uid://gph2vb1jdacf" path="res://Scenes/potion_2.gd" id="6_0uv5o"]
+[ext_resource type="Script" uid="uid://b0qj61af0rq2v" path="res://Scenes/potion_3.gd" id="7_ojqsy"]
+[ext_resource type="PackedScene" uid="uid://chg7nv0f85bg6" path="res://Scenes/timer.tscn" id="9_ne1wf"]
+[ext_resource type="AudioStream" uid="uid://cabi3fytgd8t5" path="res://images/844290__randbsoundbites__popping-open-a-potion-or-elixir-for-rpg-game.wav" id="10_qytqt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11mgy"]
 shader = ExtResource("1_11mgy")
 shader_parameter/speed = 0.005
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
+size = Vector2(1523.5, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phg8r"]
+size = Vector2(537.125, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kh0ps"]
+size = Vector2(500.5, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yost"]
+size = Vector2(519, 44)
+
+[sub_resource type="Animation" id="Animation_5txvl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(911, 340)]
+}
+
+[sub_resource type="Animation" id="Animation_0uv5o"]
+resource_name = "floating"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(911, 344), Vector2(911, 337)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojqsy"]
+_data = {
+&"RESET": SubResource("Animation_5txvl"),
+&"floating": SubResource("Animation_0uv5o")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dt6fw"]
+radius = 30.016663
+
 [node name="minigame1" type="Node2D" unique_id=279974912]
+script = ExtResource("1_jmcek")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1230359250]
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1300290316]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1300290316]
 offset_right = 1160.0
 offset_bottom = 646.0
 color = Color(0.9999997, 0.59523225, 0.1983813, 1)
 
-[node name="TextureRect" type="TextureRect" parent="StaticBody2D" unique_id=249786662]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=249786662]
 material = SubResource("ShaderMaterial_11mgy")
 offset_left = 3.0
 offset_top = -27.0
@@ -25,4 +85,140 @@ offset_bottom = 727.0
 texture = ExtResource("1_enoba")
 expand_mode = 1
 
+[node name="timer" parent="." unique_id=351166132 instance=ExtResource("9_ne1wf")]
+offset_left = 26.0
+offset_top = 7.0
+offset_right = 134.0
+offset_bottom = 85.0
+theme_override_font_sizes/normal_font_size = 52
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1230359250]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=458641396]
+offset_left = -161.0
+offset_top = 558.0
+offset_right = 1374.0
+offset_bottom = 696.0
+color = Color(0.84020054, 0.41832998, 0.14179376, 1)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1830525325]
+position = Vector2(605.25, 620.5)
+shape = SubResource("RectangleShape2D_11mgy")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2019864638]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=861914533]
+offset_left = 598.0
+offset_top = 415.0
+offset_right = 1136.0
+offset_bottom = 463.0
+color = Color(0.84020054, 0.41832998, 0.14179376, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1887813696]
+position = Vector2(870, 440)
+shape = SubResource("RectangleShape2D_phg8r")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=102768792]
+position = Vector2(528, 392)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3" unique_id=1941108780]
+offset_left = -468.0
+offset_top = -135.0
+offset_right = 34.0
+offset_bottom = -89.0
+color = Color(0.84020054, 0.41832998, 0.14179376, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=74375783]
+position = Vector2(-221, -112)
+shape = SubResource("RectangleShape2D_kh0ps")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1191145198]
+position = Vector2(1056, 784)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4" unique_id=113958118]
+offset_left = -494.0
+offset_top = -665.0
+offset_right = 27.0
+offset_bottom = -618.0
+color = Color(0.84020054, 0.41832998, 0.14179376, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=70241727]
+position = Vector2(-232, -645)
+shape = SubResource("RectangleShape2D_4yost")
+
+[node name="player" parent="." unique_id=142796690 instance=ExtResource("3_f6tb2")]
+position = Vector2(84, 464)
+
+[node name="potion" type="Node2D" parent="." unique_id=484340480]
+script = ExtResource("4_5txvl")
+
+[node name="TextureRect" type="TextureRect" parent="potion" unique_id=1835671873]
+offset_left = 911.0
+offset_top = 340.0
+offset_right = 995.0
+offset_bottom = 421.0
+texture = ExtResource("4_o6yob")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="potion" unique_id=1400965875]
+libraries/ = SubResource("AnimationLibrary_ojqsy")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="potion" unique_id=820135640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potion/Area2D" unique_id=383268756]
+position = Vector2(953, 378)
+shape = SubResource("CircleShape2D_dt6fw")
+
+[node name="CollectSound" type="AudioStreamPlayer" parent="potion" unique_id=670721635]
+stream = ExtResource("10_qytqt")
+
+[node name="potion2" type="Node2D" parent="." unique_id=1072947364]
+position = Vector2(-672, -157)
+script = ExtResource("6_0uv5o")
+
+[node name="TextureRect" type="TextureRect" parent="potion2" unique_id=412724488]
+offset_left = 911.0
+offset_top = 340.0
+offset_right = 995.0
+offset_bottom = 421.0
+texture = ExtResource("4_o6yob")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="potion2" unique_id=400806630]
+libraries/ = SubResource("AnimationLibrary_ojqsy")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="potion2" unique_id=620385638]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potion2/Area2D" unique_id=2141341980]
+position = Vector2(953, 378)
+shape = SubResource("CircleShape2D_dt6fw")
+
+[node name="CollectSound" type="AudioStreamPlayer" parent="potion2" unique_id=1144127221]
+stream = ExtResource("10_qytqt")
+
+[node name="potion3" type="Node2D" parent="." unique_id=2052684919]
+position = Vector2(68, -299)
+script = ExtResource("7_ojqsy")
+
+[node name="TextureRect" type="TextureRect" parent="potion3" unique_id=92509703]
+offset_left = 911.0
+offset_top = 340.0
+offset_right = 995.0
+offset_bottom = 421.0
+texture = ExtResource("4_o6yob")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="potion3" unique_id=710318662]
+libraries/ = SubResource("AnimationLibrary_ojqsy")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="potion3" unique_id=292433574]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potion3/Area2D" unique_id=948610176]
+position = Vector2(953, 378)
+shape = SubResource("CircleShape2D_dt6fw")
+
+[node name="CollectSound" type="AudioStreamPlayer" parent="potion3" unique_id=1813888903]
+stream = ExtResource("10_qytqt")
