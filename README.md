@@ -34,7 +34,7 @@ You start with 5 lives.
 
 ## Goal
 
-Complete all 3 minigames and reach the "You Did It!" screen.
+Complete all 3 minigames and reach the adorable "You Did It!" screen.
 
 ## Built With
 
@@ -42,6 +42,3 @@ Complete all 3 minigames and reach the "You Did It!" screen.
 * GDScript
 * GitHub
 
-## Project
-
-This project was created as a personal game-development project to practice game design, programming, and game mechanics in Godot.
