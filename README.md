@@ -6,7 +6,7 @@ A small Halloween-themed collection of fast-paced minigames made in Godot.
 
 Hallo-ware is a Halloween-inspired minigame game where you have to complete quick challenges before time runs out.
 
-The game features 3 different minigames, each with its own challenge.
+The game features **6 different minigames**, each with its own challenge.
 
 ## Minigames
 
@@ -22,6 +22,18 @@ Click all of the ghosts before time runs out.
 
 Avoid the falling pumpkins and survive until the timer reaches zero.
 
+### Minigame 4 — Survive the Pong
+
+Keep the ball in play and survive until the timer reaches zero.
+
+### Minigame 5 — Organize the Candles
+
+Remember the correct color order, then organize the five candles into the correct sequence before time runs out.
+
+### Minigame 6 — Flappy Bat
+
+Control a flying bat and navigate through purple, web-covered pipes. Avoid the pipes and survive until the timer reaches zero.
+
 ## Lives
 
 You start with 5 lives.
@@ -34,11 +46,7 @@ You start with 5 lives.
 
 ## Goal
 
-Complete all 3 minigames and reach the adorable "You Did It!" screen.
+Complete all 6 minigames and reach the adorable **"You Did It!"** screen.
 
-## Built With
 
-* Godot
-* GDScript
-* GitHub
 
