@@ -1,52 +1,32 @@
-# Hallo-ware
+# Halloware
 
-A small Halloween-themed collection of fast-paced minigames made in Godot.
+This is my second game built using Godot. This is a WarioWare-inspired Halloween game.
 
-## About the Game
+## Features
 
-Hallo-ware is a Halloween-inspired minigame game where you have to complete quick challenges before time runs out.
+6 Minigames
 
-The game features **6 different minigames**, each with its own challenge.
+### 1. Collect the potions
+The player has 10 seconds to complete the game by collecting all the potions.
 
-## Minigames
+### 2. Click the Ghosts
+The player has 6 seconds to click all the ghosts to reach the next level safely.
 
-### Minigame 1 — Collect the Potions
+### 3. Dodge the Pumpkins
+The player needs to dodge the falling pumpkins.
 
-Collect all of the potions before the timer runs out.
+### 4. Pong
+The player has 10 seconds to complete the Pong game to proceed.
 
-### Minigame 2 — Catch the Ghosts
+### 5. Order the Candles
+Colors will flash on the screen, and the player has 6-7 seconds to organize the candles correctly
 
-Click all of the ghosts before time runs out.
+### 6. Flappy Bat
+A Flappy Bird-inspired game; the player has 15 seconds to complete the minigame safely.
 
-### Minigame 3 — Dodge the Pumpkins
-
-Avoid the falling pumpkins and survive until the timer reaches zero.
-
-### Minigame 4 — Survive the Pong
-
-Keep the ball in play and survive until the timer reaches zero.
-
-### Minigame 5 — Organize the Candles
-
-Remember the correct color order, then organize the five candles into the correct sequence before time runs out.
-
-### Minigame 6 — Flappy Bat
-
-Control a flying bat and navigate through purple, web-covered pipes. Avoid the pipes and survive until the timer reaches zero.
-
-## Lives
-
-You start with 5 lives.
-
-* Completing a minigame moves you forward.
-* Failing a minigame costs 1 life.
-* If you still have lives remaining, you must retry that minigame.
-* Losing all 5 lives results in a Game Over.
-* You don't need to finish with all 5 lives to win.
-
-## Goal
-
-Complete all 6 minigames and reach the adorable **"You Did It!"** screen.
+## Built With
+Godot
+GDScript
 
 
 
