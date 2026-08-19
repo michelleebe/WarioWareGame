@@ -1,6 +1,9 @@
 # Halloware
 
-This is my second game built using Godot. This is a WarioWare-inspired Halloween game.
+This is my second game built using Godot. This is a WarioWare-inspired Halloween game. Filled with a bunch of minigames that the player needs to complete to win.
+
+
+
 
 ## Features
 
